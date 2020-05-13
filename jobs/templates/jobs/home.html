@@ -4,16 +4,29 @@
 
   <main role="main">
 
-    <section class="jumbotron text-center">
+    <section class="jumbotron">
       <div class="container">
-        <h1>Hello</h1>
-        <p class="lead text-muted">Welcome to</p>
-        <p>
-          <a href="mailto:huchida0622@gmail.com" class="btn btn-primary my-2">Email</a>
-        </p>
-        <img src="{% static 'Hiroki.jpg' %}" height="300" alt="Hiroki">
+        <div class="row">
+          <div class="col-4">
+            <h1>内田 裕貴</h1>
+            <img src="{% static 'Hiroki.jpg' %}" height="250" alt="image">
+            <p class="lead text-muted">
+              {% include "jobs/profile.html" %}
+            </p>
+          </div>
+
+            {% include "jobs/resume.html" %}
+          
+        </div>
+        {# <p><a href="mailto:huchida0622@gmail.com" class="btn btn-primary my-2">Email</a></p> #}
       </div>
     </section>
+
+
+
+
+
+
 
     <div class="album py-5 bg-light">
       <div class="container">

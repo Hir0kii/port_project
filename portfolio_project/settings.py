@@ -125,6 +125,7 @@ USE_TZ = True
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio_project/static'),
+    os.path.join(BASE_DIR, 'jobs/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
