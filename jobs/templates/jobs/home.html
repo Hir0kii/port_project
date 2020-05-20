@@ -2,53 +2,70 @@
 {% block content %}
 {% load static %}
 
-  <main role="main">
+<section class='profile'>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row mt-4">
 
-    <section class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-4">
-            <h1>内田 裕貴</h1>
-            <img src="{% static 'Hiroki.jpg' %}" height="250" alt="image">
-            <p class="lead text-muted">
-              {% include "jobs/profile.html" %}
-            </p>
-          </div>
-
-            {% include "jobs/resume.html" %}
-          
+        <div class="col-4">
+          <img src="{% static 'jobs/images/photo.JPG' %}" height="250" alt="image">
         </div>
-        {# <p><a href="mailto:huchida0622@gmail.com" class="btn btn-primary my-2">Email</a></p> #}
+        <div class="col-8">
+          {% include "jobs/profile.html" %}
+        </div>
       </div>
-    </section>
 
-
-
-
-
-
-
-    <div class="album py-5 bg-light">
-      <div class="container">
-        <div class="row">
-
-          {% for job in jobs.all %}
-
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="bd-placeholder-img card-img-top" src="{{ job.image.url }}" width="100%" height="225" alt="No Image" />
-                <div class="card-body">
-                  <p class="card-text">{{ job.summary }}</p>
-                </div>
-              </div>
-            </div>
-
-          {% endfor %}
-
+      <div class="row mt-4">
+        <div class="col">
+          <p><img src="{% static "jobs/logos/birthday.png" %}" height="40" alt="birthday"> 1992/6/22 (27歳)</p>
         </div>
+        <div class="col">
+          <p><img src="{% static "jobs/logos/license.png" %}" height="40" alt="license"> 一級建築士、TOEIC 880点</p>
+        </div>
+        <div class="col">
+          <p><img src="{% static "jobs/logos/location.png" %}" height="40" alt="phone"> 日本、大阪府</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p><img src="{% static "jobs/logos/phone.png" %}" height="40" alt="phone"> 080-1500-2937</p>
+        </div>
+        <div class="col">
+          <p><img src="{% static "jobs/logos/mail.png" %}" height="30" alt="mail"> huchida0622@gmail.com</p>
+        </div>
+
       </div>
     </div>
+  </div>
+</section>
 
-  </main>
+<section class="experience">
+  <div class="container">
+    {% include "jobs/resume.html" %}
+  </div>
+</section>
+
+<section class="project">
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+
+        {% for job in jobs.all %}
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="{{ job.image.url }}" width="100%" height="225" alt="No Image" />
+            <div class="card-body">
+              <p class="card-text">{{ job.summary }}</p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
