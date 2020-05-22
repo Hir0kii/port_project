@@ -10,15 +10,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- css -->
   <link rel="stylesheet" href="{% static 'jobs/css/master.css' %}">
-  <link rel="stylesheet" href="{% static 'jobs/css/profile_resume.css' %}">
 
   <!-- google font -->
-  <link href='//fonts.googleapis.com/css?family=Roboto:200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
       <a class="navbar-brand" href="{% url 'home' %}">Hiroki Uchida</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,7 +26,7 @@
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="https://www.linkedin.com/in/hir0kiuchida"><img src="{% static 'jobs/logos/linkedin.png' %}" height=25 alt="linkedin"></a>
           <a class="nav-item nav-link" href="https://github.com/Hir0kii"><img src="{% static 'jobs/logos/github.png' %}" height=25 alt="github"></a>
-          <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Full Resume</a>
+          <a class="nav-item nav-link" href="{% static 'jobs/images/portresume.pdf' %}">Full Resume</a>
         </div>
       </div>
     </nav>

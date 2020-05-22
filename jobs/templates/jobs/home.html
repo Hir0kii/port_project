@@ -8,7 +8,7 @@
       <div class="row mt-4">
 
         <div class="col-4">
-          <img src="{% static 'jobs/images/photo.JPG' %}" height="250" alt="image">
+          <img class="rounded" src="{% static 'jobs/images/photo.JPG' %}" height="250" alt="image">
         </div>
         <div class="col-8">
           {% include "jobs/profile.html" %}
@@ -23,7 +23,7 @@
           <p><img src="{% static "jobs/logos/license.png" %}" height="40" alt="license"> 一級建築士、TOEIC 880点</p>
         </div>
         <div class="col">
-          <p><img src="{% static "jobs/logos/location.png" %}" height="40" alt="phone"> 日本、大阪府</p>
+          <p><img src="{% static "jobs/logos/location.png" %}" height="40" alt="location"> 日本、大阪府</p>
         </div>
       </div>
       <div class="row mt-4">
@@ -46,26 +46,24 @@
 </section>
 
 <section class="project">
-        {% for job in jobs.all %}
-        <hr class="featurette-divider">
+  <div class="container">
+    <h1><strong class="under_line">Works</strong></h1>
+    {% for job in jobs.all %}
+    <hr class="featurette-divider">
 
-            <div class="row featurette">
-              <div class="col-md-7">
-                <h2 class="featurette-heading">{{ job.title }}<span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">
-                  {{ job.summary }}
-                </p>
-              </div>
-              <div class="col-md-3">
-                <img class="rounded" src="{{ job.image.url }}" height="300" alt="project image">
-              </div>
-            </div>
-
-
-        {% endfor %}
-
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">{{ job.title }}<span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">
+          {{ job.summary }}
+        </p>
+      </div>
+      <div class="col-md-3">
+        <img class="rounded" src="{{ job.image.url }}" height="300" alt="project image">
       </div>
     </div>
+
+    {% endfor %}
   </div>
 </section>
 

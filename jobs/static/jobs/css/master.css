@@ -1,27 +1,15 @@
 *{
-  background-color: #F4F1DE;
+  font-family: 'Sawarabi Gothic', sans-serif;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.navbar{
+  background-color: #3D405B;
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+p{
+  color: #3D405B;
 }
 
-p {
-  font-family: "Roboto",sans-serif;
-  margin: 0.5px;
-}
-
-h1 {
-  font-family: "Roboto",sans-serif;
+.under_line{
+  font-family: 'Gloria Hallelujah', cursive;
 }
