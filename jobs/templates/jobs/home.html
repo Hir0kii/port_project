@@ -53,10 +53,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">{{ job.title }}<span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">
-          {{ job.summary }}
-        </p>
+        <h2><a class="featurette-heading" href="#">{{ job.title }}</a></h2>
+        <p class="lead">{{ job.summary }}</p>
       </div>
       <div class="col-md-3">
         <img class="rounded" src="{{ job.image.url }}" height="300" alt="project image">
